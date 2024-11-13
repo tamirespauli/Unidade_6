@@ -76,6 +76,12 @@ public class Uni6Exe10 {
         teclado.close();
     }
 
+    //Este método inclui um valor no final do vetor, desde que haja espaço:
+
+    // Verifica se a posição posFinal está dentro do limite do vetor (50).
+    // Solicita ao usuário o valor a ser incluído e o armazena na posição vet[posFinal].
+    // Incrementa posFinal e informa que o valor foi incluído. Caso o vetor já esteja cheio, exibe uma mensagem informando isso.
+
     private int vetIncluir_1(int vet[], Scanner teclado, int posFinal) {
         if (posFinal < vet.length) {
             System.out.print("Informe o valor a ser incluído: ");
@@ -89,6 +95,11 @@ public class Uni6Exe10 {
         return posFinal;
     }
 
+    // Este método pesquisa um valor no vetor:
+
+    // Solicita o valor a ser pesquisado.
+    // Percorre o vetor até a posição posFinal. Se encontrar o valor, retorna true; caso contrário, retorna false.
+
     private boolean vetPesquisa_2(int vet[], Scanner teclado, int posFinal) {
         System.out.print("Informe o valor a ser pesquisado: ");
         int valor = teclado.nextInt();
@@ -99,6 +110,12 @@ public class Uni6Exe10 {
         }
         return false; // Valor não encontrado
     }
+
+    // Este método altera um valor específico:
+
+    // Solicita o valor antigo (a ser substituído) e percorre o vetor até a posição posFinal.
+    // Se encontrar a primeira ocorrência do valor, solicita o novo valor e substitui o valor antigo.
+    // Caso o valor antigo não seja encontrado, informa que o número não foi encontrado.
 
     private void vetAlterar_3(int vet[], Scanner teclado, int posFinal) {
         System.out.print("Informe o valor a ser alterado: ");
@@ -118,6 +135,13 @@ public class Uni6Exe10 {
             System.out.println("Número não encontrado!");
         }
     }
+
+    // Este método exclui um valor do vetor:
+
+    // Solicita o valor a ser excluído e percorre o vetor até posFinal.
+    // Se o valor for encontrado, os elementos à direita são deslocados uma posição para a esquerda, sobrepondo o valor excluído. A última posição é zerada e posFinal é decrementado.
+    // Informa se o valor foi excluído com sucesso ou não encontrado.
+
 
     private void vetExcluir_4(int vet[], Scanner teclado, int posFinal) {
         System.out.print("Informe o valor a ser excluído: ");
@@ -139,6 +163,11 @@ public class Uni6Exe10 {
         }
     }
 
+    // Exibe todos os valores armazenados no vetor:
+
+    // Verifica se posFinal é zero. Se for, significa que o vetor está vazio.
+    // Caso contrário, exibe os valores do vetor até a posição posFinal.
+
     private void vetMostrar_5(int vet[], int posFinal) {
         if (posFinal == 0) {
             System.out.println("Vetor vazio!");
@@ -149,6 +178,12 @@ public class Uni6Exe10 {
             }
         }
     }
+
+    // Este método ordena o vetor usando o algoritmo de Bubble Sort:
+
+    // Compara pares de elementos adjacentes e troca-os se estiverem fora de ordem (para ordenação crescente).
+    // O processo é repetido até que todos os elementos estejam ordenados.
+    // É um algoritmo básico de ordenação e garante que todos os elementos fiquem em ordem crescente ao final.
 
     private void vetOrdenar_6(int vet[], int posFinal) {
         for (int i = 0; i < posFinal - 1; i++) {
@@ -163,6 +198,12 @@ public class Uni6Exe10 {
         }
         System.out.println("Valores ordenados com sucesso!");
     }
+
+    // Este método inverte a ordem dos valores no vetor:
+
+    // Usa dois ponteiros (inicio e fim) para percorrer o vetor de ambos os lados e trocar os elementos das extremidades até o centro.
+    // Cada troca é realizada entre vet[inicio] e vet[fim].
+    // O processo continua até que todos os elementos sejam invertidos.
 
     private void vetInverter_7(int vet[], int posFinal) {
         int inicio = 0;
@@ -181,3 +222,4 @@ public class Uni6Exe10 {
         new Uni6Exe10();
     }
 }
+
